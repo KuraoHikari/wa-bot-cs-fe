@@ -88,6 +88,8 @@ export default function useUpdateContactDetailMutation(
    return { previousState };
   },
   onError(error, variables, context) {
+   console.log("🚀 ~ onError ~ variables:", variables);
+   console.log("🚀 ~ onError ~ error:", error);
    queryClient.setQueryData(
     ["user-contact", page],
     (context as any)?.previousState

@@ -9,16 +9,13 @@ import {
 import {
  Form,
  FormControl,
- FormDescription,
  FormField,
  FormItem,
- FormLabel,
  FormMessage,
 } from "@/components/ui/form";
 
-import { Separator } from "@/components/ui/separator";
 import { Textarea } from "@/components/ui/textarea";
-import useQueryGetQrCode from "@/hooks/useQueryGetQrCode";
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -34,7 +31,7 @@ import useGetSettingInfo from "@/hooks/useGetSettingInfo";
 import useUpdateSettingMutation from "@/hooks/useUpdateSettingMutation";
 import { Switch } from "@/components/ui/switch";
 import PDFViewer from "@/components/PdfViewer";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import useUpdateSettingGptMutation from "@/hooks/useUpdateSettingGptMutation";
 

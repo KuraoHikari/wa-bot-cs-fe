@@ -53,7 +53,7 @@ import {
 } from "@/components/ui/pagination";
 import useGetContact from "@/hooks/useGetContacts";
 import EditContactDialog from "./EditContactDetailDialog";
-import { EditContactLimitForm } from "@/components/custom-form/edit-contact-limit-form";
+
 import EditContactLimitDialog from "./EditContactLimitDialog";
 
 const StatisticPage = () => {

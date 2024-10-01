@@ -63,6 +63,7 @@ export default function useUpdateSettingGptMutation() {
    return { previousState };
   },
   onError(error, variables, context) {
+   console.log("🚀 ~ onError ~ variables:", variables);
    console.log("🚀 ~ onError ~ error:", error);
    queryClient.setQueryData(["user-setting"], (context as any)?.previousState);
    toast({
