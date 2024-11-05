@@ -1,50 +1,98 @@
-# React + TypeScript + Vite
+# WA Bot CS FE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a Web App designed to help manage small stores efficiently. It's built using Node.js, React, and various modern libraries and frameworks to deliver a robust and user-friendly experience.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To get this project up and running on your local environment, follow these steps:
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Before you begin, ensure you have met the following requirements:
 
-- Configure the top-level `parserOptions` property like this:
+- **Node.js (v18 or higher)**: The project is built with Node.js. You must have Node.js version 18 or higher installed on your machine. You can download it from [Node.js official website](https://nodejs.org/).
+- **npm (Node Package Manager)**: npm is used to install dependencies. It comes with Node.js, so if you have Node.js installed, you should have npm as well.
+- **Git**: While not strictly necessary, the project recommends using Git for version control. If you plan to clone the repository, make sure Git is installed on your system. You can download it from [Git's official website](https://git-scm.com/).
+- **Basic knowledge of terminal or command line usage**: Since the installation and running of the project require using the terminal or command line, basic knowledge in this area will be beneficial.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Once you have these prerequisites, you can proceed with the installation instructions below.
+
+### Clone the repository
+
+```bash
+git clone git@github.com:KuraoHikari/wa-bot-cs-fe.git
+cd wa-bot-cs-fe
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Install dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
+# or
+yarn install
 ```
+
+### Set up environment variables:
+
+Create a `.env` file in the root directory and fill it with necessary environment variables:
+
+```
+VITE_APP_BASE_URL=http://localhost:3000
+```
+
+### Run the application
+
+```bash
+npm run dev
+# or
+yarn dev
+```
+
+This will start the Vite development server, and you should be able to access the app on `http://localhost:5173`.
+
+## Deployment
+
+The project has been deployed and can be accessed at the following URL:
+
+- **[FE-WA-Bot-CS-FE](https://wabotaiv2.netlify.app)**.
+
+## Dependencies
+
+This project uses several key technologies and libraries:
+
+- **[Node.js](https://nodejs.org/en/)**: JavaScript runtime.
+- **[Vite](https://vitejs.dev/)**: Front-end build tool.
+- **[React](https://reactjs.org/)**: Library for building user interfaces.
+- **[Shadcn UI](https://shadcn.github.io/)**: UI framework.
+- **[KyJS](https://github.com/sindresorhus/ky)**: HTTP client.
+- **[TanStack React Query](https://tanstack.com/query/v4)**: For server state management.
+
+- **[Zod](https://github.com/colinhacks/zod)**: Data validation.
+- **[TailwindCSS](https://tailwindcss.com/)**: Utility-first CSS framework.
+- **[React Hook Form](https://react-hook-form.com/)**: Forms management.
+
+## Acknowledgements
+
+Big thanks to everyone who has contributed to the open-source projects used in this application. Special thanks to:
+
+- The React community for continuous support and innovative solutions.
+- Contributors of Vite for their blazing fast build tool.
+
+## Contributing
+
+Contributions to the Warung Management App are welcome! If you have suggestions for improvements or bug fixes, please feel free to:
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/AmazingFeature).
+3. Make your changes.
+4. Commit your changes (git commit -m 'Add some AmazingFeature').
+5. Push to the branch (git push origin feature/AmazingFeature).
+6. Open a pull request.
+
+## Authors
+
+- **Kurao Hikari** - _Initial work_ - [KuraoHikari](https://github.com/KuraoHikari)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
