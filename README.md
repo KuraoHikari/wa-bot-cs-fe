@@ -1,10 +1,36 @@
+# Table of Content WA Bot CS FE
+
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+
+- [WA Bot CS FE](#wa-bot-cs-fe)
+  - [Installation](#installation)
+  - [Prerequisites](#prerequisites)
+    - [Clone the repository](#clone-the-repository)
+    - [Install dependencies](#install-dependencies)
+    - [Set up environment variables:](#set-up-environment-variables)
+    - [Run the application](#run-the-application)
+  - [Deployment](#deployment)
+  - [Dependencies](#dependencies)
+  - [Acknowledgements](#acknowledgements)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+  - [License](#license)
+
+<!-- TOC end -->
+
+<!-- TOC --><a name="wa-bot-cs-fe"></a>
+
 # WA Bot CS FE
 
 This project is a Web App designed to help manage small stores efficiently. It's built using Node.js, React, and various modern libraries and frameworks to deliver a robust and user-friendly experience.
 
+<!-- TOC --><a name="installation"></a>
+
 ## Installation
 
 To get this project up and running on your local environment, follow these steps:
+
+<!-- TOC --><a name="prerequisites"></a>
 
 ## Prerequisites
 
@@ -17,12 +43,16 @@ Before you begin, ensure you have met the following requirements:
 
 Once you have these prerequisites, you can proceed with the installation instructions below.
 
+<!-- TOC --><a name="clone-the-repository"></a>
+
 ### Clone the repository
 
 ```bash
 git clone git@github.com:KuraoHikari/wa-bot-cs-fe.git
 cd wa-bot-cs-fe
 ```
+
+<!-- TOC --><a name="install-dependencies"></a>
 
 ### Install dependencies
 
@@ -32,6 +62,8 @@ npm install
 yarn install
 ```
 
+<!-- TOC --><a name="set-up-environment-variables"></a>
+
 ### Set up environment variables:
 
 Create a `.env` file in the root directory and fill it with necessary environment variables:
@@ -39,6 +71,8 @@ Create a `.env` file in the root directory and fill it with necessary environmen
 ```
 VITE_APP_BASE_URL=http://localhost:3000
 ```
+
+<!-- TOC --><a name="run-the-application"></a>
 
 ### Run the application
 
@@ -50,11 +84,15 @@ yarn dev
 
 This will start the Vite development server, and you should be able to access the app on `http://localhost:5173`.
 
+<!-- TOC --><a name="deployment"></a>
+
 ## Deployment
 
 The project has been deployed and can be accessed at the following URL:
 
 - **[FE-WA-Bot-CS-FE](https://wabotaiv2.netlify.app)**.
+
+<!-- TOC --><a name="dependencies"></a>
 
 ## Dependencies
 
@@ -71,12 +109,16 @@ This project uses several key technologies and libraries:
 - **[TailwindCSS](https://tailwindcss.com/)**: Utility-first CSS framework.
 - **[React Hook Form](https://react-hook-form.com/)**: Forms management.
 
+<!-- TOC --><a name="acknowledgements"></a>
+
 ## Acknowledgements
 
 Big thanks to everyone who has contributed to the open-source projects used in this application. Special thanks to:
 
 - The React community for continuous support and innovative solutions.
 - Contributors of Vite for their blazing fast build tool.
+
+<!-- TOC --><a name="contributing"></a>
 
 ## Contributing
 
@@ -89,9 +131,13 @@ Contributions to the Warung Management App are welcome! If you have suggestions 
 5. Push to the branch (git push origin feature/AmazingFeature).
 6. Open a pull request.
 
+<!-- TOC --><a name="authors"></a>
+
 ## Authors
 
 - **Kurao Hikari** - _Initial work_ - [KuraoHikari](https://github.com/KuraoHikari)
+
+<!-- TOC --><a name="license"></a>
 
 ## License
 
