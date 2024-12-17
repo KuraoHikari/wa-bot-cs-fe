@@ -28,12 +28,13 @@ import {
  SelectValue,
 } from "@/components/ui/select";
 import useGetSettingInfo from "@/hooks/useGetSettingInfo";
-import useUpdateSettingMutation from "@/hooks/useUpdateSettingMutation";
-import { Switch } from "@/components/ui/switch";
+
 import PDFViewer from "@/components/PdfViewer";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import useUpdateSettingGptMutation from "@/hooks/useUpdateSettingGptMutation";
+import { Input } from "@/components/ui/input";
+import useUpdatePdfSettingMutation from "@/hooks/useUpdatePdfSettingMutation";
 
 export const editPromptSchema = z.object({
  gptModel: z.string(),
@@ -60,12 +61,30 @@ const GptSetting = () => {
   setValue("prompt", data.prompt);
  }
 
- const { mutate } = useUpdateSettingMutation();
  const { mutate: mutateGpt, isPending } = useUpdateSettingGptMutation();
- const stopAiResponseSetting = (value: boolean) => {
-  mutate(value);
+ const { mutate: mutatePdf } = useUpdatePdfSettingMutation();
+ //  const stopAiResponseSetting = (value: boolean) => {
+ //   mutate(value);
+ //  };
+
+ const [fileSelected, setFileSelected] = useState<File | null>(null);
+
+ const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  if (event.target.files && event.target.files.length > 0) {
+   setFileSelected(event.target.files[0]);
+  } else {
+   setFileSelected(null);
+  }
  };
 
+ const handleUpload = () => {
+  if (fileSelected) {
+   const formData = new FormData();
+   formData.append("pdf", fileSelected);
+
+   mutatePdf(fileSelected);
+  }
+ };
  function onSubmit(values: z.infer<typeof formSchema>) {
   mutateGpt(values);
  }
@@ -159,17 +178,24 @@ const GptSetting = () => {
      <CardHeader className="flex flex-row items-start bg-muted/50">
       <div className="grid gap-0.5">
        <CardTitle className="group flex items-center gap-2 text-lg">
-        Stop Ai All Ai Response
+        Change PDF
        </CardTitle>
        <CardDescription>
-        this switch will stop all ai chat response
+        Change the pdf file to get the context for the ai chat response
        </CardDescription>
       </div>
-      <div className="ml-auto flex items-center gap-1">
-       <Switch
-        checked={data?.stopAiResponse}
-        onCheckedChange={stopAiResponseSetting}
+      <div className="ml-auto items-center gap-1">
+       <Input
+        id="pdf"
+        type="file"
+        onChange={handleFileChange}
+        className="mb-1"
        />
+       {fileSelected && (
+        <Button type="button" onClick={handleUpload}>
+         Submit
+        </Button>
+       )}
       </div>
      </CardHeader>
      <CardContent className="p-4">
