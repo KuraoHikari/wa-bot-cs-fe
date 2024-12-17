@@ -25,7 +25,7 @@ const PDFViewer: React.FC<PDFViewerProps> = React.memo(
   const token = localStorage.getItem("token"); // Replace this with the actual token
   const fileConfig = useMemo(
    () => ({
-    url: `${import.meta.env.VITE_APP_BASE_URL}/setting/pdf/${fileName}`, // PDF URL
+    url: `${import.meta.env.VITE_APP_BASE_URL}/proxy/pdf/${fileName}`, // PDF URL
     httpHeaders: {
      token: `${token}`, // Adding the Authorization header
     },
