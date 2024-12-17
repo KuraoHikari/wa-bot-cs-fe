@@ -41,7 +41,7 @@ export default function useUpdatePdfSettingMutation() {
     throw error;
    }
   },
-  onMutate: async (file: File) => {
+  onMutate: async () => {
    await queryClient.cancelQueries({ queryKey: ["pdf-setting"] });
 
    const previousState = queryClient.getQueryData(["pdf-setting"]);
